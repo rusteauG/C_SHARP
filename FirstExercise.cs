@@ -13,13 +13,12 @@ Console.ReadKey();
 
 
 //method to GetName
-string GetName(string name)
+string GetName(string prompt)
 {
-    string itemName = string.Empty;
-    Console.Write(name);
+    Console.Write(prompt);
     do
     {
-        itemName = Console.ReadLine();
+      string  itemName = Console.ReadLine();
 
         if (String.IsNullOrEmpty(itemName))
         {
@@ -100,7 +99,7 @@ int GetValidItemCode()
     do
     {
         Console.WriteLine("Enter item code:");
-        isValidCode = int.TryParse(Console.ReadLine(), out icode);
+        isValidCode = int.TryParse(Console.ReadLine(), out code);
         if (!isValidCode)
         {
             Console.WriteLine("Please enter a valid numeric code.");
