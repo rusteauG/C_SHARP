@@ -10,6 +10,13 @@ if (int.TryParse(ageText, out int age) == false)
     return;
 }
 
+// Check if the age is non-negative
+if (age < 0)
+{
+    Console.WriteLine("Age cannot be negative. Please enter a valid age.");
+    return;
+}
+
 if (firstName.ToLower() == "bob" || firstName.ToLower() == "sue")
 {
     formattedString = $"Professor {firstName}";
